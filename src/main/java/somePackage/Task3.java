@@ -5,7 +5,6 @@
 package somePackage;
 
 
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -26,10 +25,10 @@ public class Task3 {
                 System.out.println("Please enter positive integer greater than 0 for numbers array size");
                 inputString = br.readLine();
                 arrayLength = Integer.parseInt(inputString);
-                if (arrayLength<=0) arrayLength=0;
+                if (arrayLength <= 0) arrayLength = 0;
             } catch (Exception e) {
-             //   e.printStackTrace();
-              //  System.out.println("Please enter positive integer greater than 0 for numbers array size");
+                //   e.printStackTrace();
+                //  System.out.println("Please enter positive integer greater than 0 for numbers array size");
             }
 
         int[] integerArray = new int[arrayLength];
@@ -38,32 +37,36 @@ public class Task3 {
 
         for (int i = 0; i < arrayLength; i++) {
             try {
-            inputString = br.readLine();
-            integerArray[i]=Integer.parseInt(inputString);
+                inputString = br.readLine();
+                integerArray[i] = Integer.parseInt(inputString);
+                System.out.println("Entered " + integerArray[i]);
             } catch (Exception e) {
-             //   e.printStackTrace();
+                //   e.printStackTrace();
+                i--;
                 System.out.println("Please enter integer");
             }
         }
 
         System.out.println("Array entering finished");
 
-        System.out.println("You've entered that array:"  );
-        for (int i:integerArray) {
-            System.out.print(i+" ");
+        System.out.println("You've entered that array:");
+        for (int i : integerArray) {
+            System.out.print(i + " ");
         }
         System.out.println();
 
         System.out.println("The array elements divisible by 3 are: ");
-        for (int i:integerArray) {
+        for (int i : integerArray) {
             if (i % 3 == 0)
-            System.out.print(i+" ");
+                System.out.print(i + " ");
         }
         System.out.println();
 
-        try{
+        try {
             Thread.sleep(19000);
-        } catch (Exception e) {e.printStackTrace(); }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
     }
