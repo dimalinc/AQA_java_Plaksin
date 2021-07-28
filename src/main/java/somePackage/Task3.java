@@ -23,11 +23,13 @@ public class Task3 {
 
         while (arrayLength == 0)
             try {
+                System.out.println("Please enter positive integer greater than 0 for numbers array size");
                 inputString = br.readLine();
                 arrayLength = Integer.parseInt(inputString);
+                if (arrayLength<=0) arrayLength=0;
             } catch (Exception e) {
              //   e.printStackTrace();
-                System.out.println("Please enter integer for numbers array size");
+              //  System.out.println("Please enter positive integer greater than 0 for numbers array size");
             }
 
         int[] integerArray = new int[arrayLength];
