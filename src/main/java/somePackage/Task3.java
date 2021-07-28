@@ -1,19 +1,20 @@
-package somePackage;// TODO: Составить алгоритм: на входе есть числовой массив,
+// TODO: Составить алгоритм: на входе есть числовой массив,
 //  необходимо вывести элементы массива кратные 3
 
 
+package somePackage;
+
+
+
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Task3 {
 
     public static void main(String[] args) {
 
-
         String inputString;
         int arrayLength = 0;
-
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println();
@@ -40,7 +41,6 @@ public class Task3 {
             } catch (Exception e) {
              //   e.printStackTrace();
                 System.out.println("Please enter integer");
-
             }
         }
 

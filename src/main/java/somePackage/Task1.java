@@ -1,11 +1,12 @@
 // TODO: Составить алгоритм: если введенное число больше 7, то вывести “Привет”
 
+// tested with float 0x1.fffffep127   and 3.40282346638528860e+38 and long 8223372036854775808.0
+// and with 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+// need more detailed task for other numeric notations
+// dot is considered decimal separator, coma will not work
 
 package somePackage;
 
-
-
-import org.apache.commons.lang3.math.NumberUtils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -44,10 +45,6 @@ public class Task1 {
         System.out.println("You have entered " + inputString);
 
         // Print
-        // tested with float 0x1.fffffep127   and 3.40282346638528860e+38 and long 8223372036854775808.0
-        // and with 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
-        // need more detailed task for other numeric notations
-        // dot is considered decimal separator, coma will not work
         if ( /*( NumberUtils.isParsable(inputString)  ) &*/ (isGreaterThanCheck(inputString))) {
             System.out.println("Привет");
         }
