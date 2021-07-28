@@ -11,15 +11,19 @@ import java.awt.event.ActionListener;
     public class JFrame2 extends JFrame {
 
         public static final String nameToPass = "Вячеслав";
+        public static final String buttonText = "Go";
+        public static final String inputLabelText = "Enter name please";
+        public static final String outputLabelText = "System message";
+        public static final String titleCaption = "Vyacheslavs' Check";
 
-        public JButton button1 = new JButton("GO");
-        public JLabel inputLabel = new JLabel("Enter name please");
-        public JLabel outputLabel = new JLabel("System message");
+        public JButton button1 = new JButton(buttonText);
+        public JLabel inputLabel = new JLabel(inputLabelText);
+        public JLabel outputLabel = new JLabel(outputLabelText);
         public JTextField input = new JTextField("", 3);
         public JTextField output = new JTextField("", 3);
 
         public JFrame2() {
-            super("Vyacheslavs' Check");
+            super(titleCaption);
             {
                 this.setBounds(250, 100, 600, 300);
 
@@ -42,23 +46,15 @@ import java.awt.event.ActionListener;
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource() == button1) {
                     try {
-                        output.setText(vyacheslavCheck(input.getText()));
+                        output.setText(Task2.vyacheslavCheck(input.getText()));
                     } catch (Exception except) {
-                        output.setText("Please enter name here");
+                        output.setText(inputLabelText);
                     }
                     input.setText(null);
                 }
             }
 
-            public String vyacheslavCheck(String name) {
 
-                if (name.equals(nameToPass)) {
-                    name = "Привет, Вячеслав";
-                } else {
-                    name = "Нет такого имени";
-                }
-                return name;
-            }
         }
 
 
